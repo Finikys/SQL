@@ -9,13 +9,13 @@ import static com.codeborne.selenide.Selenide.page;
 
 public class LoginPage {
     @FindBy(css = "[data-test-id=login] input")
-    private SelenideElement loginField;
+    private static SelenideElement loginField;
     @FindBy(css = "[data-test-id=password] input")
-    private SelenideElement passwordField;
+    private static SelenideElement passwordField;
     @FindBy(css = "[data-test-id=action-login]")
-    private SelenideElement loginButton;
+    private static SelenideElement loginButton;
     @FindBy(css = "[data-test-id='error-notification']")
-    private SelenideElement errorNotification;
+    private static SelenideElement errorNotification;
 
     public static void verifyErrorNotificationVisability() { errorNotification.shouldBe(visible);}
 

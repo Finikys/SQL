@@ -24,10 +24,21 @@ public class BankLoginTest {
     }
 
     @Test
-    void shouldGetErrorNotificationIfLoginWithRandomUserWiyhoutAddingToBase() {
+    void shouldGetErrorNotificationIfLoginWithRandomUserWithoutAddingToBase() {
         var loginPage = open("http://localhost:9999", LoginPage.class);
         var authInfo = DataHelper.generateRandomUser();
         LoginPage.validLogin(authInfo);
         LoginPage.verifyErrorNotificationVisability();
+    }
+
+    @Test
+    void houldGetErrorNotificationIfLoginWithRandomExistUserAndRandomPassword() {
+        var loginpage = open("http://localhost:9999", LoginPage.class);
+        var authinfo = DataHelper.getAuthInfoWithTestData();
+        var verificationPage = loginpage.validLogin(authinfo);
+        verificationPage.verifyVerificationPageVisability();
+        var verificationCode = DataHelper.generateRandomVerificationCode();
+        verificationPage.verfy(verificationCode.getCode());
+        verificationPage.verifyErrorNotificationVisability();
     }
 }

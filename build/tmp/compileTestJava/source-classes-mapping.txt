@@ -9,7 +9,7 @@ ru/netology/banklogin/data/DataHelper.java
  ru.netology.banklogin.data.DataHelper$AuthCode
  ru.netology.banklogin.data.DataHelper$AuthInfo
  ru.netology.banklogin.data.DataHelper$VerificationCode
-ru/netology/banklogin/data/SQLHelper.java
- ru.netology.banklogin.data.SQLHelper
 ru/netology/banklogin/test/BankLoginTest.java
  ru.netology.banklogin.test.BankLoginTest
+ru/netology/banklogin/data/SQLHelper.java
+ ru.netology.banklogin.data.SQLHelper
